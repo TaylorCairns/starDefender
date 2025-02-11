@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "mX9t8sXkoFHG4zoITb2kx/lLDxhaDURhPpDB0ZN2nGs=",
+  "Source": "LocalStarDefenderBackend",
+  "BasePath": "_content/LocalStarDefenderBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
