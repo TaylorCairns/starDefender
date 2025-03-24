@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/taylorcairns/Desktop/Development/Early Careers/Star Defender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj": {}
+    "/home/taylor/starDefender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj": {}
   },
   "projects": {
-    "/Users/taylorcairns/Desktop/Development/Early Careers/Star Defender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj": {
+    "/home/taylor/starDefender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/taylorcairns/Desktop/Development/Early Careers/Star Defender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj",
+        "projectUniqueName": "/home/taylor/starDefender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj",
         "projectName": "LocalStarDefenderBackend",
-        "projectPath": "/Users/taylorcairns/Desktop/Development/Early Careers/Star Defender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj",
-        "packagesPath": "/Users/taylorcairns/.nuget/packages/",
-        "outputPath": "/Users/taylorcairns/Desktop/Development/Early Careers/Star Defender/LocalStarDefenderBackend/obj/",
+        "projectPath": "/home/taylor/starDefender/LocalStarDefenderBackend/LocalStarDefenderBackend.csproj",
+        "packagesPath": "/home/taylor/.nuget/packages/",
+        "outputPath": "/home/taylor/starDefender/LocalStarDefenderBackend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/taylorcairns/.nuget/NuGet/NuGet.Config"
+          "/home/taylor/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/local/Cellar/dotnet/9.0.0/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,9 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -47,7 +46,11 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
@@ -79,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/9.0.0/libexec/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

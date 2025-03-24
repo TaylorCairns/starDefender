@@ -1,0 +1,16 @@
+services:
+  backend:
+    build:
+      context: ./LocalStarDefenderBackend
+      dockerfile: Dockerfile
+    ports:
+      - "5285:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html

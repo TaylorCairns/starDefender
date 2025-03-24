@@ -1,0 +1,7 @@
+FROM nginx:alpine
+COPY starDefender.html /usr/share/nginx/html/index.html
+COPY starDefender.css /usr/share/nginx/html/
+COPY starDefender.js /usr/share/nginx/html/
+RUN chmod -R 755 /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

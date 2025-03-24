@@ -8,14 +8,29 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
     });
 });
-builder.Services.AddDbContext<StarDefenderDbContext>(options =>
-    options.UseSqlite("Data Source=StarDefender.db"));
-var app = builder.Build();
-using (var scope = app.Services.CreateScope())
+
+if (builder.Environment.IsEnvironment("Test"))
 {
-    var db = scope.ServiceProvider.GetRequiredService<StarDefenderDbContext>();
-    db.Database.EnsureCreated();
+    builder.Services.AddDbContext<StarDefenderDbContext>(options =>
+        options.UseInMemoryDatabase("TestDb"));
 }
+else
+{
+    builder.Services.AddDbContext<StarDefenderDbContext>(options =>
+        options.UseSqlite("Data Source=StarDefender.db"));
+}
+
+var app = builder.Build();
+
+if (!app.Environment.IsEnvironment("Test"))
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<StarDefenderDbContext>();
+        db.Database.EnsureCreated();
+    }
+}
+
 app.UseCors("CorsPolicy");
 var sessions = new Dictionary<string, string>();
 
@@ -50,7 +65,6 @@ app.MapGet("/api/scores", async (StarDefenderDbContext db) =>
 
 app.MapGet("/api/users", async (StarDefenderDbContext db) =>
 {
-    // WARNING: Exposes all usernames/passwords in plain text. 
     var users = await db.Users.ToListAsync();
     return users;
 });
@@ -92,3 +106,5 @@ public class Score
     public int Points { get; set; }
     public DateTime Timestamp { get; set; }
 }
+
+public partial class Program { }

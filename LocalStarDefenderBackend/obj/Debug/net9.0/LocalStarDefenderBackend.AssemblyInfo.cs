@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LocalStarDefenderBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a962d3292b76270772827845dbcd75681291bdf")]
 [assembly: System.Reflection.AssemblyProductAttribute("LocalStarDefenderBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LocalStarDefenderBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,26 @@
+{
+  "name": "stardefender",
+  "version": "1.0.0",
+  "main": "starDefender.js",
+  "scripts": {
+    "test": "jest",
+    "test1": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaylorCairns/starDefender.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaylorCairns/starDefender/issues"
+  },
+  "homepage": "https://github.com/TaylorCairns/starDefender#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "node-fetch": "^2.7.0"
+  }
+}
